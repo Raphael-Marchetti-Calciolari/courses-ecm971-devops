@@ -1,2 +1,3 @@
-# courses-ecm971-devops
-Repository for DevOps classes at Intituto Maua de Tecnologia
+# Devops: Metodologia de Desenvolvimento de Software
+
+Repositório para aulas de DevOps no Intituto Maua de Tecnologia
