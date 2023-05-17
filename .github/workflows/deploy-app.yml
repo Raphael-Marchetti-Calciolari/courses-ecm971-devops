@@ -10,7 +10,7 @@ jobs:
   build_e_deply_react_app:
     runs-on: ubuntu-latest
     steps:
-      - name: Mudando para repositório 
+      - name: Adicionando arquivos do repositório 
         uses: actions/checkout@v3
       
       - name: Instalando dependencias
@@ -18,7 +18,11 @@ jobs:
           cd devops-test-app
           npm install
 
-      - name: Iniciando aplicação
+      - name: Building app
         run: |
-          cd devops-test-app
-          npm start
+        cd devops-test-app
+        npm run build
+
+      - name: Realizando deployment para github pages
+        run: cd devops-test-app/build
+        uses: peaceiris/actions-gh-pages@v3
