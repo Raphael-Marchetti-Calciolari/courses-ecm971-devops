@@ -1,0 +1,32 @@
+# nome do workflow
+name: Meu primeiro workflow
+
+# quando o workflow entra em execução
+on:
+  workflow_dispatch
+  
+# define-se conjunto de jobs
+jobs:
+  # nome do primeiro job
+  primeiro_job:
+    # runner desse job
+    runs-on: ubuntu-latest
+    
+    # coleção de steps deste job
+    steps:
+    
+      # primeiro step
+      - name: Hello, Github Actions!
+        run: echo "Hello, Github Actions!"
+        
+      # segundo step
+      - name: Qual o diretório atual?
+        run: pwd
+        
+      # terceiro step
+      - name: Conteúdo diretório atual,incluindo arquivos ocultos?
+        run: ls -a
+        
+      # quarto step
+      - name: Até mais!
+        run: echo "See you, github actions!"
