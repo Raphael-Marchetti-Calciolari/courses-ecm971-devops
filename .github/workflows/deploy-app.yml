@@ -10,11 +10,11 @@ jobs:
   build_e_deply_react_app:
     runs-on: ubuntu-latest
     steps:
+      - name: Voltando um diretorio
+        run: cd ..
+
       - name: Check working dir
         run: pwd
       
       - name: Check files in working dir
         run: ls -la
-
-      - name: Checking npm
-        run: npm --version
