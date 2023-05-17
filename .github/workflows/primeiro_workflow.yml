@@ -27,6 +27,9 @@ jobs:
       - name: Conteúdo diretório atual,incluindo arquivos ocultos?
         run: ls -a
         
-      # quarto step
+      # quarto step - agora nosso step tem vários comandos shell
       - name: Até mais!
-        run: echo "See you, github actions!"
+        run: |
+          echo "See you, github actions!"
+          echo "Bye!"
+          echo "Bye yet again"
