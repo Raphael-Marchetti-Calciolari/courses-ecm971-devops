@@ -13,11 +13,12 @@ jobs:
       - name: Mudando para repositório 
         uses: actions/checkout@v3
       
-      - name: Entrando na pasta raiz do react app
-        run: cd devops-test-app
-
-      - name: Checando working directory e arquivos
+      - name: Instalando dependencias
         run: |
           cd devops-test-app
-          pwd
-          ls -la
+          npm install
+
+      - name: Iniciando aplicação
+        run: |
+          cd devops-test-app
+          npm start
