@@ -12,9 +12,11 @@ jobs:
     steps:
       - name: Mudando para repositório 
         uses: actions/checkout@v3
-
-      - name: Check working dir
-        run: pwd
       
-      - name: Check files in working dir
-        run: ls -la
+      - name: Entrando na pasta raiz do react app
+        run: cd devops-test-app
+
+      - name: Checando working directory e arquivos
+        run: |
+          pwd
+          ls -la
