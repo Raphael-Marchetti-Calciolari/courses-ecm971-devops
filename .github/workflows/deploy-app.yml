@@ -18,5 +18,6 @@ jobs:
 
       - name: Checando working directory e arquivos
         run: |
+          cd devops-test-app
           pwd
           ls -la
