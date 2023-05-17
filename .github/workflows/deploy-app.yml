@@ -1,0 +1,16 @@
+name: Deploy react app
+
+on: 
+  push: 
+    branches: 
+      - main
+  workflow_dispatch:
+
+jobs:
+  build_e_deply_react_app:
+    steps:
+      - name: Check working dir
+        run: pwd
+      
+      - name: Check files in working dir
+        run: ls -la
